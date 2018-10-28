@@ -66,6 +66,11 @@
 #define ELOG_ASYNC_LINE_OUTPUT
 /* asynchronous output mode using POSIX pthread implementation */
 #define ELOG_ASYNC_OUTPUT_USING_PTHREAD
+
+#ifdef _MSC_BUILD
+#define _CRT_SECURE_NO_WARNINGS
+#define HAVE_STRUCT_TIMESPEC
+#endif
 /*---------------------------------------------------------------------------*/
 /* enable buffered output mode */
 #define ELOG_BUF_OUTPUT_ENABLE

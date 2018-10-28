@@ -33,6 +33,12 @@
 #include <stdlib.h>
 #include <windows.h>
 
+#ifdef _DEBUG
+#pragma comment(lib, "..\\..\\..\\..\\..\\Build\\libd\\EasyLoggerd.lib")
+#else
+#pragma comment(lib, "..\\..\\..\\..\\..\\Build\\lib\\EasyLogger.lib")
+#endif
+
 static void test_elog(void);
 
 int main(void) {
